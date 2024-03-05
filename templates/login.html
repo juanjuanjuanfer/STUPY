@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Log in to STUPY</title>
+    <style>
+        body {
+      background-color: #121212; /* Dark background */
+      color: #e0e0e0; /* Light text */
+      font-family: Arial, sans-serif;
+    }
+
+    a {
+      color: #bb86fc; /* Light purple for links, for better visibility */
+    }
+
+    a:visited {
+      color: #b0a0ff; /* Slightly different shade for visited links */
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Log in to STUPY</h1>
+    <p>
+        Do not use your real name or any other personal information.
+    </p>
+    <p>
+        (like your institutional email, for example)
+    </p>
+    <form action="/login" method="post">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]{0,12}" title="Username must be alphanumeric and 12 characters max" required><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" pattern="[a-zA-Z0-9]{6,12}" title="Password must be alphanumeric and 6 to 12 characters long" required><br><br>
+      <input type="submit" value="Log in">
+    </form>
+
+    <ul>
+      <li><a href="/signup">Sign up</a></li>
+      <li><a href="/login">Log in</a></li>
+    </ul>
+
+    <p>
+      <a href="/dashboard">Go to dashboard</a>
+    </p>
+    <p>
+        <a href="/">Go to main page</a>
+    </p>
+    <p>
+        <a href="/logout">Log out</a>
+    </p>
+  </body>
