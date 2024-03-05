@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Succesfully signed up!</title>
+    <style>
+        body {
+      background-color: #121212; /* Dark background */
+      color: #e0e0e0; /* Light text */
+      font-family: Arial, sans-serif;
+    }
+
+    a {
+      color: #bb86fc; /* Light purple for links, for better visibility */
+    }
+
+    a:visited {
+      color: #b0a0ff; /* Slightly different shade for visited links */
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to STUPY</h1>
+    <p>
+        You have successfully signed up {{ username }}!
+    </p>
+
+    <ul>
+      <li><a href="/signup">Sign up</a></li>
+      <li><a href="/login">Log in</a></li>
+    </ul>
+
+    <p>
+      <a href="/dashboard">Go to dashboard</a>
+    </p>
+    <p>
+        <a href="/">Go to main page</a>
+    </p>
+    <p>
+        <a href="/logout">Log out</a>
+    </p>
+  </body>
