@@ -40,6 +40,24 @@
     <p>
         <a href="/logout">Log out</a>
     </p>
+    <div>
+      <p>Post a new thread</p>
+      <form action="/dashboard" method="post">
+        <input type="text" name="title" placeholder="Title" title="Up to 50 characters" pattern = "{1,50}"required><br>
+        <textarea name="content" placeholder="Content" pattern="{1,500}" title = "Up to 500 characters" required></textarea><br>
+        <input type="submit" value="Post">
+    </div>
+    <div>
+      {% for thread in threads %}
+      <div>
+        <h2>{{ thread['title'] }}</h2> <!-- Correctly accessing dictionary values -->
+        <p>{{ thread['content'] }}</p>
+        <p>Posted on: {{ thread['date_created'] }}</p> <!-- Displaying datetime -->
+        <p>By {{ thread['author_id'] }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    
 
     
   </body>
